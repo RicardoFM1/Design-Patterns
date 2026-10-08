@@ -1,6 +1,6 @@
 <?php
 
-// 1. As cores
+// As cores
 interface Cor {
     public function getNome(): string;
 }
@@ -15,7 +15,7 @@ class Azul implements Cor {
     public function getNome(): string { return "Azul"; }
 }
 
-// 2. O Veículo (recebe a cor por parâmetro).
+// O Veículo (recebe a cor por parâmetro).
 class CarroEsportivo {
     private Cor $cor; // Esta propriedade é a "Ponte" (Bridge).
 
@@ -28,7 +28,7 @@ class CarroEsportivo {
     }
 }
 
-// 3. Montando o objeto na prática.
+// Montando o objeto na prática.
 $carroVermelho = new CarroEsportivo(new Vermelho());
 $carroAzul = new CarroEsportivo(new Azul());
 
